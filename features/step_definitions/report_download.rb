@@ -19,4 +19,5 @@ Then("I can download") do
   steps %{
     And I click on link "Download"
   }
+  sleep 5
 end
