@@ -5,8 +5,8 @@ require 'selenium-webdriver'
 def start_browser
   path = File.dirname(__FILE__)
   # path = File.join(File.dirname(__FILE__), '../downloads/')
-  download_path = path.to_s
-  puts download_path
+  @download_path = path.to_s
+  puts @download_path
   # Dir.mkdir(download_path) unless Dir.exist?(download_path)
   # begin
   #
@@ -22,7 +22,7 @@ def start_browser
 
   prefs = {
   prompt_for_download: false,
-  default_directory: download_path
+  default_directory: @download_path
   }
   options = Selenium::WebDriver::Chrome::Options.new
   options.add_preference(:download, prefs)
