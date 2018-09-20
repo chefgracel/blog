@@ -3,11 +3,11 @@ require 'selenium-webdriver'
 
 
 def start_browser
-  # path = File.dirname(__FILE__)
-  path = File.join(File.dirname(__FILE__), '../downloads/')
+  path = File.dirname(__FILE__)
+  # path = File.join(File.dirname(__FILE__), '../downloads/')
   download_path = path.to_s
   puts download_path
-  Dir.mkdir(download_path) unless Dir.exist?(download_path)
+  # Dir.mkdir(download_path) unless Dir.exist?(download_path)
   # begin
   #
   #   old_umask = File.umask
